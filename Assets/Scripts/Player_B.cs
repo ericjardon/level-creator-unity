@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Security.Cryptography;
 using UnityEngine;
+//using UnityEngine.CoreModule;
 using System;
 using System.Runtime.InteropServices;
 using Debug = UnityEngine.Debug;
@@ -16,12 +17,19 @@ public class Player_B : MonoBehaviour
     public int extraJumps;
     public int jumps;
     public float jumpForce;
+    public float x;
+    public float y;
+    public float z;
+    public GameObject goodItem;
+    public GameObject enemy;
+
 
     // Start is called before the first frame update
     void Start()
     {
         rigidbody2D = transform.GetComponent<Rigidbody2D>();
         collider = transform.GetComponent<CapsuleCollider2D>();
+         restart(x,y,z);
     }
 
     void FixedUpdate(){
@@ -53,10 +61,45 @@ public class Player_B : MonoBehaviour
         }
         
     }
+public void restart(float x, float y , float z){
+  gameObject.transform.position = new Vector3(x, y,z);
 
+}
     private bool IsGrounded()
     {
         RaycastHit2D raycastHit2d = Physics2D.BoxCast(collider.bounds.center, collider.bounds.size, 0f, Vector2.down, .1f, platformsLayerMask);
         return raycastHit2d.collider != null;
     }
+
+ private void OnCollisionEnter2D (Collision2D collision)
+ {
+     if (collision.gameObject.tag == "Enemy")
+     {
+        Destroy(gameObject);
+     }
+
+      if (collision.gameObject.tag == "Surprise")
+     {
+
+
+ Destroy(collision.gameObject);
+if((UnityEngine.Random.Range(0f,1f))>0.5f){
+ Instantiate(goodItem, new Vector3(collision.gameObject.transform.position.x,collision.gameObject.transform.position.y+1,0), Quaternion.identity);
 }
+
+else{
+Instantiate(enemy, new Vector3(collision.gameObject.transform.position.x,collision.gameObject.transform.position.y+1,0) , Quaternion.identity);
+}
+       
+
+
+       
+     }
+
+     
+    
+ }
+}
+
+
+
