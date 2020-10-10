@@ -75,7 +75,8 @@ public void restart(float x, float y , float z){
  {
      if (collision.gameObject.tag == "Enemy")
      {
-        Destroy(gameObject);
+        restart(-3,3,0);
+        Destroy(collision.gameObject);
      }
 
       if (collision.gameObject.tag == "Surprise")
@@ -89,6 +90,7 @@ if((UnityEngine.Random.Range(0f,1f))>0.5f){
 
 else{
 Instantiate(enemy, new Vector3(collision.gameObject.transform.position.x,collision.gameObject.transform.position.y+1,0) , Quaternion.identity);
+
 }
        
 
