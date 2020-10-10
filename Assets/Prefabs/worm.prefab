@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2698419250874702002}
   - component: {fileID: 1580315194}
   - component: {fileID: 3755983406382352147}
+  - component: {fileID: -2712554588248797096}
   m_Layer: 0
   m_Name: worm
   m_TagString: Enemy
@@ -131,3 +132,17 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-2712554588248797096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 687929204628800579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44dbbbb60c6b546429504b2b507ff142, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 21300000, guid: 0536bd3610269f74b9d294e2a5326f24, type: 3}
+  id: 4

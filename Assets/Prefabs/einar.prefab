@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1786910626345604606}
   - component: {fileID: 1786910626345604607}
   - component: {fileID: 1786910626345604605}
+  - component: {fileID: 6657381613180335746}
   m_Layer: 0
   m_Name: einar
   m_TagString: Untagged
@@ -146,3 +147,17 @@ MonoBehaviour:
   goodItem: {fileID: 6251976857788712235, guid: 4998e260a525e7d4cab7cf3f7d098101,
     type: 3}
   enemy: {fileID: 687929204628800579, guid: 16d812da9dc111d4c95cb1397fff75c9, type: 3}
+--- !u!114 &6657381613180335746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1786910626345604602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44dbbbb60c6b546429504b2b507ff142, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 21300000, guid: d269c4b87611f4e4ab68f3661d23f2cc, type: 3}
+  id: 1
