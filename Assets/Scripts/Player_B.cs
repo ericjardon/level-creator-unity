@@ -71,36 +71,36 @@ public void restart(float x, float y , float z){
         return raycastHit2d.collider != null;
     }
 
- private void OnCollisionEnter2D (Collision2D collision)
- {
-     if (collision.gameObject.tag == "Enemy")
-     {
-        restart(-3,3,0);
-        Destroy(collision.gameObject);
-     }
+//  private void OnCollisionEnter2D (Collision2D collision)
+//  {
+//      if (collision.gameObject.tag == "Enemy")
+//      {
+//         restart(-3,3,0);
+//         Destroy(collision.gameObject);
+//      }
 
-      if (collision.gameObject.tag == "Surprise")
-     {
+//       if (collision.gameObject.tag == "Surprise")
+//      {
 
 
- Destroy(collision.gameObject);
-if((UnityEngine.Random.Range(0f,1f))>0.5f){
- Instantiate(goodItem, new Vector3(collision.gameObject.transform.position.x,collision.gameObject.transform.position.y+1,0), Quaternion.identity);
-}
+//  Destroy(collision.gameObject);
+// if((UnityEngine.Random.Range(0f,1f))>0.5f){
+//  Instantiate(goodItem, new Vector3(collision.gameObject.transform.position.x,collision.gameObject.transform.position.y+1,0), Quaternion.identity);
+// }
 
-else{
-Instantiate(enemy, new Vector3(collision.gameObject.transform.position.x,collision.gameObject.transform.position.y+1,0) , Quaternion.identity);
+// else{
+// Instantiate(enemy, new Vector3(collision.gameObject.transform.position.x,collision.gameObject.transform.position.y+1,0) , Quaternion.identity);
 
-}
+// }
        
 
 
        
-     }
+//      }
 
      
     
- }
+//  }
 }
 
 

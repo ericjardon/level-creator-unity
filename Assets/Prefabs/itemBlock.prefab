@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 970588540152207922}
   - component: {fileID: 970588540152207933}
   - component: {fileID: 1176356844827309348}
+  - component: {fileID: -3676575505780710233}
   m_Layer: 0
   m_Name: itemBlock
   m_TagString: Untagged
@@ -124,3 +125,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 0e5375b8db2c59843b2f84f7c9488cb2, type: 3}
   id: 2
+--- !u!114 &-3676575505780710233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 970588540152207920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0819a1f4b2d4474493b7091006ab18c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goodItem: {fileID: 6251976857788712235, guid: 4998e260a525e7d4cab7cf3f7d098101,
+    type: 3}
+  enemy: {fileID: 687929204628800579, guid: 16d812da9dc111d4c95cb1397fff75c9, type: 3}
