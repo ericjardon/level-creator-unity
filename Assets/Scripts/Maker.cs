@@ -49,6 +49,7 @@ public class Maker : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.Mouse0)){
             Instantiate(blocks[blockID].gameObject, mousePos, Quaternion.identity);
+        print(blocks);
         }
 
         sprite.transform.position = mousePos;
