@@ -29,7 +29,7 @@ public class Player_B : MonoBehaviour
     {
         rigidbody2D = transform.GetComponent<Rigidbody2D>();
         collider = transform.GetComponent<CapsuleCollider2D>();
-         restart(x,y,z);
+        // Si llamamos esta función nos forza a que el player siempre aparezca en el mismo punto restart(x,y,z);
     }
 
     void FixedUpdate(){
