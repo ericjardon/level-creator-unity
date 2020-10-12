@@ -17,7 +17,7 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        groundInfo = Physics2D.Raycast(groundDetection.position, Vector2.down, rayLength);
+       // groundInfo = Physics2D.Raycast(groundDetection.position, Vector2.down, rayLength);
 
     }
 
@@ -35,8 +35,8 @@ Vector2 movement = new Vector2(0.01f,0);
 
      private bool IsGrounded()
     {
-        RaycastHit2D raycastHit2d = Physics2D.RaycastHit2D groundInfo = Physics2D.Raycast(groundDetection.position, Vector2.down, rayLength);
+      //  RaycastHit2D raycastHit2d = Physics2D.RaycastHit2D groundInfo = Physics2D.Raycast(groundDetection.position, Vector2.down, rayLength);
 
-        return raycastHit2d.collider != null;
+        return true;// raycastHit2d.collider != null;
     }
 }
