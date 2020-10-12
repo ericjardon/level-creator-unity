@@ -20,6 +20,8 @@ public class Maker : MonoBehaviour
     // Reference to the sprite
     public SpriteRenderer sprite;
 
+    public static bool isPlaying; 
+
     
 
 
@@ -37,21 +39,55 @@ public class Maker : MonoBehaviour
             });
         }  
     }
+    public void SwitchPlaying(){
+        isPlaying = !isPlaying;
+        sprite.enabled = !isPlaying; 
+    }
+
 
     // Update is called once per frame
     void Update()
     {
+       
+        if(UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject())
+        return;
+         if(isPlaying)
+        return;
+
+        
         // Get the position of the mouse on the screen 
         var mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mousePos.z = 0;
         mousePos.x = Mathf.RoundToInt(mousePos.x);
         mousePos.y = Mathf.RoundToInt(mousePos.y);
-
+    sprite.transform.position = mousePos;
         if(Input.GetKeyDown(KeyCode.Mouse0)){
-            Instantiate(blocks[blockID].gameObject, mousePos, Quaternion.identity);
-        print(blocks);
+            
+            
+            var cast = Physics2D.CircleCast(mousePos, 0.4f, Vector2.zero);
+
+            if(cast.collider == null){
+
+                Instantiate(blocks[blockID].gameObject, mousePos, Quaternion.identity);
+            }
         }
 
-        sprite.transform.position = mousePos;
+            if(Input.GetKeyDown(KeyCode.Mouse1)){
+            
+            
+            var cast = Physics2D.CircleCast(mousePos, 0.4f, Vector2.zero);
+
+            if(cast.collider != null){
+
+                Destroy(cast.collider.gameObject);
+            }
+
+
+
+
+        
+        }
+
+    
     }
 }

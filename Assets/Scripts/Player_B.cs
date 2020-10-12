@@ -31,8 +31,11 @@ public class Player_B : MonoBehaviour
         collider = transform.GetComponent<CapsuleCollider2D>();
         // Si llamamos esta función nos forza a que el player siempre aparezca en el mismo punto restart(x,y,z);
     }
-
+//27.29
     void FixedUpdate(){
+    if(!Maker.isPlaying)
+    return;
+
         if (IsGrounded() == true)
         {
             jumps = extraJumps;
@@ -41,7 +44,8 @@ public class Player_B : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(!Maker.isPlaying)
+    return;
         float horizontal = Input.GetAxis("Horizontal"); /// Va de los valores-1 a 1
         float vertical = Input.GetAxis("Vertical");
         horizontal = horizontal * 1 / 25;
