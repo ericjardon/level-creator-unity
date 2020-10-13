@@ -21,8 +21,7 @@ public class Maker : MonoBehaviour
     public SpriteRenderer sprite;
 
     public static bool isPlaying; 
-
-    
+    public GameObject[] editModeObjects;
 
 
     // Start is called before the first frame update
@@ -41,14 +40,16 @@ public class Maker : MonoBehaviour
     }
     public void SwitchPlaying(){
         isPlaying = !isPlaying;
-        sprite.enabled = !isPlaying; 
+        sprite.enabled = !isPlaying;
+        for (int i =0; i < editModeObjects.Length; i++){
+            editModeObjects[i].SetActive(!isPlaying);
+        } 
     }
 
 
     // Update is called once per frame
     void Update()
     {
-       
         if(UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject())
         return;
          if(isPlaying)
@@ -60,7 +61,7 @@ public class Maker : MonoBehaviour
         mousePos.z = 0;
         mousePos.x = Mathf.RoundToInt(mousePos.x);
         mousePos.y = Mathf.RoundToInt(mousePos.y);
-    sprite.transform.position = mousePos;
+        sprite.transform.position = mousePos;
         if(Input.GetKeyDown(KeyCode.Mouse0)){
             
             
