@@ -22,7 +22,7 @@ public struct Block {
 
 public class LeveLoader : MonoBehaviour
 {
-    public string path = @"C:\Users\ericj\Desktop\UnityLevels\mylevel.bin";     
+    public string path = @"C:\Users\ericj\Documents\Levels\UnityLevels\mylevel.bin";     
     // TODO: accesible on Save pero no on LOAD
     public MakerBlock[] blockPrefabs;   // guardamos los prefabs que se pueden instanciar en el juego
     
