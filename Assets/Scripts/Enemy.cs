@@ -23,7 +23,7 @@ public class Enemy : MonoBehaviour
 
     void FixedUpdate(){
         if(IsGrounded()){
-Vector2 movement = new Vector2(0.01f,0);
+        Vector2 movement = new Vector2(0.01f,0);
         transform.Translate(movement);
         }
         else{
@@ -36,7 +36,6 @@ Vector2 movement = new Vector2(0.01f,0);
      private bool IsGrounded()
     {
       //  RaycastHit2D raycastHit2d = Physics2D.RaycastHit2D groundInfo = Physics2D.Raycast(groundDetection.position, Vector2.down, rayLength);
-
         return true;// raycastHit2d.collider != null;
     }
 }

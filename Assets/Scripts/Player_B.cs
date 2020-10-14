@@ -22,6 +22,7 @@ public class Player_B : MonoBehaviour
     public float z;
     public GameObject goodItem;
     public GameObject enemy;
+    public GameObject levelManager;
 
 
     // Start is called before the first frame update
@@ -56,11 +57,9 @@ public class Player_B : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space) && jumps > 0)
         {
-                Debug.Log(jumps);
                 float jumpV = jumpForce;
                 rigidbody2D.velocity = Vector2.up * jumpV;
                 jumps --;
-                Debug.Log(jumps);
 
         }
         
@@ -75,27 +74,18 @@ public void restart(float x, float y , float z){
         return raycastHit2d.collider != null;
     }
 
-//  private void OnCollisionEnter2D (Collision2D collision)
-//  {
-//      if (collision.gameObject.tag == "Enemy")
-//      {
-//         restart(-3,3,0);
-//         Destroy(collision.gameObject);
-//      }
+    public bool IsTouchingUp(){
+        RaycastHit2D raycastUp = Physics2D.BoxCast(collider.bounds.center, collider.bounds.size, 0f, Vector2.up, 1.0f, platformsLayerMask);
+        return raycastUp.collider != null;
+    }
 
-//       if (collision.gameObject.tag == "Surprise")
-//      {
-
-
-//  Destroy(collision.gameObject);
-// if((UnityEngine.Random.Range(0f,1f))>0.5f){
-//  Instantiate(goodItem, new Vector3(collision.gameObject.transform.position.x,collision.gameObject.transform.position.y+1,0), Quaternion.identity);
-// }
-
-// else{
-// Instantiate(enemy, new Vector3(collision.gameObject.transform.position.x,collision.gameObject.transform.position.y+1,0) , Quaternion.identity);
-
-// }
+  private void OnCollisionEnter2D (Collision2D collision)
+  {
+      if (collision.gameObject.tag == "Enemy")
+      {
+        GameObject.FindObjectOfType<LeveLoader>().Load();
+      }
+}
        
 
 
