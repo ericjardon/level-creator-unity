@@ -38,6 +38,7 @@ public class Maker : MonoBehaviour
             });
         }  
     }
+
     public void SwitchPlaying(){
         isPlaying = !isPlaying;
         sprite.enabled = !isPlaying;
@@ -55,7 +56,6 @@ public class Maker : MonoBehaviour
          if(isPlaying)
         return;
 
-        
         // Get the position of the mouse on the screen 
         var mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mousePos.z = 0;
@@ -82,13 +82,6 @@ public class Maker : MonoBehaviour
 
                 Destroy(cast.collider.gameObject);
             }
-
-
-
-
-        
         }
-
-    
     }
 }
