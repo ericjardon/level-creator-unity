@@ -99,6 +99,12 @@ public void restart(float x, float y , float z){
             // rompemos la unión con la plataforma
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D other){
+        if (other.gameObject.tag=="gemGreen"){
+            Destroy(other.gameObject);
+        }
+    }
        
 }
 

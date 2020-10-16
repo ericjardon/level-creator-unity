@@ -41,6 +41,8 @@ public class Maker : MonoBehaviour
 
     public void SwitchPlaying(){
         isPlaying = !isPlaying;
+        if (isPlaying) FindObjectOfType<GemCounter>().RestartCount();
+        
         sprite.enabled = !isPlaying;
         for (int i =0; i < editModeObjects.Length; i++){
             editModeObjects[i].SetActive(!isPlaying);

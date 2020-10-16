@@ -11,11 +11,11 @@ GameObject:
   - component: {fileID: 8948975396426848816}
   - component: {fileID: 6515432089661471820}
   - component: {fileID: 3488332639050279561}
-  - component: {fileID: 5334465546161266932}
   - component: {fileID: -6082394782043301480}
+  - component: {fileID: -4737155729466558659}
   m_Layer: 0
-  m_Name: snail
-  m_TagString: Untagged
+  m_Name: gemGreen
+  m_TagString: gemGreen
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -95,7 +95,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: -0.27160668}
@@ -111,27 +111,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.28, y: 0.7367866}
   m_EdgeRadius: 0
---- !u!50 &5334465546161266932
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6251976857788712235}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0.1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!114 &-6082394782043301480
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -146,3 +125,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 0610750f33fbbcd47b3091da7d11c996, type: 3}
   id: 3
+--- !u!114 &-4737155729466558659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6251976857788712235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ef04471ab70c894b94ff462c2427150, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value: 10

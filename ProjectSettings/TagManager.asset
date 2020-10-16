@@ -8,6 +8,7 @@ TagManager:
   - Surprise
   - surpriseBottom
   - MovingPlat
+  - gemGreen
   layers:
   - Default
   - TransparentFX
