@@ -34,10 +34,10 @@ public class Player_B : MonoBehaviour
     }
 //27.29
     void FixedUpdate(){
-    if(!Maker.isPlaying)
-    return;
+        if(!Maker.isPlaying)
+        return;
 
-        if (IsGrounded() == true)
+        if (IsGrounded())
         {
             jumps = extraJumps;
         }
@@ -79,22 +79,27 @@ public void restart(float x, float y , float z){
         return raycastUp.collider != null;
     }
 
-  private void OnCollisionEnter2D (Collision2D collision)
-  {
-      if (collision.gameObject.tag == "Enemy")
-      {
+  private void OnCollisionEnter2D (Collision2D collision){
+
+      if (collision.gameObject.tag == "Enemy"){
         GameObject.FindObjectOfType<LeveLoader>().Load();
       }
-}
+
+      if (collision.gameObject.tag == "MovingPlat"){
+          // si jugador se para en la plataforma, debemos asignarlo como 
+            // un objeto hijo para que siga la plataforma
+        gameObject.transform.parent = collision.gameObject.transform;
+      }    
+
+    }
+
+    private void OnCollisionExit2D(Collision2D other) {
+        if (other.gameObject.tag == "MovingPlat"){
+            gameObject.transform.parent = null;
+            // rompemos la unión con la plataforma
+        }
+    }
        
-
-
-       
-//      }
-
-     
-    
-//  }
 }
 
 

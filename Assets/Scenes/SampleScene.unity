@@ -583,6 +583,7 @@ MonoBehaviour:
   - {fileID: -6082394782043301480, guid: 4998e260a525e7d4cab7cf3f7d098101, type: 3}
   - {fileID: -2712554588248797096, guid: 16d812da9dc111d4c95cb1397fff75c9, type: 3}
   - {fileID: -6096670486310203297, guid: d540d2e2593a94840ab0b21ef12282fd, type: 3}
+  - {fileID: 5758861868851412889, guid: 074c9f61e8e1a13449c20894232c3a4d, type: 3}
   button: {fileID: 8088569037285933945, guid: 108b58bf311298447b3f3c3ddc05676e, type: 3}
   layout: {fileID: 1616768535}
   sprite: {fileID: 1904911806}
@@ -693,6 +694,7 @@ MonoBehaviour:
   - {fileID: -6082394782043301480, guid: 4998e260a525e7d4cab7cf3f7d098101, type: 3}
   - {fileID: -2712554588248797096, guid: 16d812da9dc111d4c95cb1397fff75c9, type: 3}
   - {fileID: -6096670486310203297, guid: d540d2e2593a94840ab0b21ef12282fd, type: 3}
+  - {fileID: 5758861868851412889, guid: 074c9f61e8e1a13449c20894232c3a4d, type: 3}
 --- !u!1 &861774591
 GameObject:
   m_ObjectHideFlags: 0
@@ -1202,7 +1204,7 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 4
-  m_Spacing: 50
+  m_Spacing: 40
   m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0
